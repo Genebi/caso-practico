@@ -8,6 +8,8 @@ const modalBody = document.querySelector('.modal-body');
 
 search.addEventListener('keyup', function(e) {
 
+    this.value = this.value.toUpperCase();
+
     // Enter
     if (e.keyCode === 13) {
 
