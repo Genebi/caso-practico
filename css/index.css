@@ -1,0 +1,9 @@
+.main-title {
+	margin-top: 200px;
+	padding: 100px;
+	color: white;
+	text-shadow: 0 0 15px black;
+	font-size: 6em;
+	border-radius: 30px;
+	background: orange;
+}
