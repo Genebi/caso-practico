@@ -4,6 +4,7 @@ header('Content-Type: application/json');
 //========================================================
 
 $search = strtoupper(trim($_GET['search']));
+$type   = trim($_GET['type']);
 
 if (!empty($search)) {
 
@@ -15,7 +16,15 @@ if (!empty($search)) {
         exit;
     }
 
-    $getAssistant = mysqli_query($link, "SELECT id, name, date FROM Assistants WHERE name LIKE '%$search%'") or die (mysqli_error($link));
+    if ($type == 1) {
+
+        $getAssistant = mysqli_query($link, "SELECT * FROM Assistants WHERE name LIKE '%$search%'") or die (mysqli_error($link));
+    }
+    
+    if ($type == 2) {
+
+        $getAssistant = mysqli_query($link, "SELECT * FROM Assistants WHERE id = $search") or die (mysqli_error($link));
+    }
     
     $exists = mysqli_num_rows($getAssistant);
 
@@ -28,6 +37,9 @@ if (!empty($search)) {
             $data[] = array(
                 'id'   => $assistant['id'],
                 'name' => $assistant['name'],
+                'age'  => $assistant['age'],
+                'city' => $assistant['city'],
+                'hobbies' => $assistant['hobbies'],
                 'date' => $assistant['date']
             );
         }
