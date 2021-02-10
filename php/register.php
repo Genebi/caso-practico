@@ -9,10 +9,10 @@ $data = json_decode($data, true);
 
 if (is_array($data)) {
 
-    $name    = trim($data['name']);
+    $name    = strtoupper(trim($data['name']));
     $age     = trim($data['age']);
-    $city    = trim($data['city']);
-    $hobbies = trim($data['hobbies']);
+    $city    = strtoupper(trim($data['city']));
+    $hobbies = strtoupper(trim($data['hobbies']));
 
 
     $link = mysqli_connect('localhost', 'root', '', 'Festival');
@@ -28,7 +28,7 @@ if (is_array($data)) {
     if ($saveData) {
 
         echo json_encode(array('error' => false));
-        
+
     } else {
 
         echo json_encode(array('error' => true, 'message' => 'Error saving data'));

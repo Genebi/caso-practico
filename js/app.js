@@ -1,26 +1,38 @@
 const search = document.querySelector('#search');
 const register = document.querySelector('#register');
+const modal = document.querySelector('#closeModal');
+const error = document.querySelector('.error-message');
+
+// Form fields
+const nameAssistant = document.querySelector('#assistant-name');
+const ageAssistant = document.querySelector('#assistant-age');
+const cityAssistant = document.querySelector('#assistant-city');
+const hobbiesAssistant = document.querySelector('#assistant-hobbies');
+
 
 search.addEventListener('click', function() {
 
     document.querySelector('.main-title').style.display = 'none';
 })
 
+// Click register button
 register.addEventListener('click', function() {
 
-    let name = document.querySelector('#assistant-name').value.trim();
-    let age = document.querySelector('#assistant-age').value.trim();
-    let city = document.querySelector('#assistant-city').value.trim();
-    let hobbies = document.querySelector('#assistant-hobbies').value.trim();
+    let name = nameAssistant.value.trim();
+    let age = ageAssistant.value.trim();
+    let city = cityAssistant.value.trim();
+    let hobbies = hobbiesAssistant.value.trim();
 
     if (name.length == 0) {
-        document.querySelector('.error-message').innerHTML = 'Your name is required.';
+        error.innerHTML = 'Enter your name, please.';
+        nameAssistant.focus();
         clearMessage();
         return;
     }
 
     if (city.length == 0) {
-        document.querySelector('.error-message').innerHTML = 'Enter your city, please.';
+        error.innerHTML = 'Enter your city, please.';
+        cityAssistant.focus();
         clearMessage();
         return;
     }
@@ -30,13 +42,6 @@ register.addEventListener('click', function() {
     saveData(data);
 });
 
-
-const clearMessage = () => {
-
-    setTimeout(() => {
-        document.querySelector('.error-message').innerHTML = '';
-    }, 3000);
-}
 
 const saveData = (data) => {
 
@@ -49,6 +54,35 @@ const saveData = (data) => {
         })
         .then(resp => resp.json())
         .then(data => {
-            console.log(data);
+            if (!data.error) {
+                clearForm();
+                modal.click();
+                ageAssistant.value = 15;
+            }
         })
 }
+
+
+// Clear div displaying error
+const clearMessage = () => {
+
+    setTimeout(() => {
+        error.innerHTML = '';
+    }, 3000);
+}
+
+const clearForm = () => {
+
+    nameAssistant.value = '';
+    ageAssistant.value = '';
+    cityAssistant.value = '';
+    hobbiesAssistant.value = '';
+}
+
+ageAssistant.addEventListener('keyup', function() {
+
+    let age = this.value.trim();
+
+    this.value = age > 99 ? 99 : this.value;
+    this.value = age < 1 ? 1 : this.value;
+});

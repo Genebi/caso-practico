@@ -1,9 +1,57 @@
+body {
+    background-image: url('../img/cancun2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+
+/************ HOME ************/
+
 .main-title {
-	margin-top: 200px;
-	padding: 100px;
-	color: white;
-	text-shadow: 0 0 15px black;
-	font-size: 6em;
-	border-radius: 30px;
-	background: orange;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    font-size: 6em;
+}
+
+#registerButton {
+    background: #0D9C41;
+    border: none;
+    border-radius: 5px;
+    font-size: 3em;
+    color: whitesmoke;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-shadow: 3px 3px 3px black;
+    box-shadow: 0 3px 5px black;
+    margin-top: 50px;
+}
+
+#registerButton:hover {
+    background: #0B8036;
+}
+
+#registerButton:active,
+#registerButton:focus {
+    outline: none;
+}
+
+#content {
+    background: rgba(237, 151, 27, 0.7);
+    border-radius: 30px;
+    margin-top: 200px;
+    padding: 100px;
+}
+
+
+/******* SEARCHER *********/
+
+#search {
+    margin-top: 100px;
+    font-size: 2.5em;
+}
+
+.table {
+    margin-top: 100px;
 }
