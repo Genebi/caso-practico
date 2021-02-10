@@ -10,7 +10,7 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#">MFC</a>
+			<a class="navbar-brand" href="#" title="Music Festival Cancun 2021!">MFC</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -45,7 +45,7 @@
 
 
 	<div class="modal fade" id="registerModal">
-		<div class="modal-dialog">
+		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title">New Assistant</h5>
@@ -55,7 +55,7 @@
 					<form autocomplete="off">
 						<div class="mb-3">
 							<label for="assistant-name" class="col-form-label">Name:</label>
-							<input type="text" class="form-control" id="assistant-name" >
+							<input type="text" class="form-control" id="assistant-name">
 						</div>
 						<div class="mb-3">
 							<label for="assistant-age">Age:</label>
@@ -76,7 +76,7 @@
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeModal">Close</button>
-					<button type="button" class="btn btn-primary" id="register">Register</button>
+					<button type="button" class="btn btn-success" id="register">Register</button>
 				</div>
 			</div>
 		</div>

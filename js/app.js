@@ -75,6 +75,18 @@ const clearForm = () => {
     hobbiesAssistant.value = '';
 }
 
+nameAssistant.addEventListener('keyup', function() {
+    this.value = this.value.toUpperCase();
+});
+
+cityAssistant.addEventListener('keyup', function() {
+    this.value = this.value.toUpperCase();
+});
+
+hobbiesAssistant.addEventListener('keyup', function() {
+    this.value = this.value.toUpperCase();
+});
+
 ageAssistant.addEventListener('keyup', function() {
 
     let age = this.value.trim();
