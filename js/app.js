@@ -1,4 +1,5 @@
-const search = document.querySelector('#search');
+//================== HOME ==================
+
 const register = document.querySelector('#register');
 const modal = document.querySelector('#closeModal');
 const error = document.querySelector('.error-message');
@@ -9,11 +10,6 @@ const ageAssistant = document.querySelector('#assistant-age');
 const cityAssistant = document.querySelector('#assistant-city');
 const hobbiesAssistant = document.querySelector('#assistant-hobbies');
 
-
-search.addEventListener('click', function() {
-
-    document.querySelector('.main-title').style.display = 'none';
-})
 
 // Click register button
 register.addEventListener('click', function() {
