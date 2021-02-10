@@ -20,7 +20,7 @@
 						<a class="nav-link active" aria-current="page" href="#">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="search/">Search</a>
+						<a class="nav-link" href="search/">Search Assistants</a>
 					</li>
 				</ul>
 			</div>
@@ -55,7 +55,7 @@
 					<form autocomplete="off">
 						<div class="mb-3">
 							<label for="assistant-name" class="col-form-label">Name:</label>
-							<input type="text" class="form-control" id="assistant-name">
+							<input type="text" class="form-control" id="assistant-name" placeholder="Required">
 						</div>
 						<div class="mb-3">
 							<label for="assistant-age">Age:</label>
@@ -63,7 +63,7 @@
 						</div>
 						<div class="mb-3">
 							<label for="assistant-city">City:</label>
-							<input type="text" class="form-control" id="assistant-city">
+							<input type="text" class="form-control" id="assistant-city" placeholder="Required">
 						</div>
 						<div class="mb-3">
 							<label for="assistant-hobbies" class="col-form-label">Hobbies:</label>

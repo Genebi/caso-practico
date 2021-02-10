@@ -20,7 +20,7 @@
 						<a class="nav-link" aria-current="page" href="../">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link active" href="#">Search</a>
+						<a class="nav-link active" href="#">Search Assistants</a>
 					</li>
 				</ul>
 			</div>
